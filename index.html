@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>bingx-rclone</title>
+  <meta name="description" content="bingx-rclone は、所有者本人の rclone が自分のファイルを自分の Google ドライブへ一方向に同期するための個人用デスクトップ OAuth クライアントです。">
+  <style>
+    :root { color-scheme: light; --bg: #f6f5f2; --text: #1c1917; --muted: #57534e; --line: #e7e5e4; --accent: #134e4a; --card: #fff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", YuGothic, Meiryo, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); line-height: 1.75; font-size: 1.05rem; }
+    a { color: var(--accent); }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    header, main, footer { width: min(40rem, calc(100% - 2rem)); margin-inline: auto; }
+    header { padding: 2.5rem 0 1.25rem; }
+    .kicker { margin: 0 0 0.35rem; color: var(--muted); font-size: 0.85rem; letter-spacing: 0.04em; }
+    h1 { font-size: 1.85rem; line-height: 1.25; margin: 0; font-weight: 650; }
+    nav { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.75rem 1.1rem; font-size: 0.95rem; }
+    main { padding-bottom: 2.5rem; }
+    h2 { font-size: 1.15rem; margin: 2rem 0 0.6rem; }
+    p, li { margin: 0.55rem 0; }
+    ul { padding-left: 1.2rem; }
+    code, .scope { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: 0.86em; }
+    .scope { display: block; overflow-wrap: anywhere; background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 0.75rem 0.9rem; margin: 0.8rem 0; }
+    .en { margin-top: 2.75rem; padding-top: 0.25rem; border-top: 1px solid var(--line); }
+    footer { border-top: 1px solid var(--line); padding: 1.25rem 0 2.5rem; color: var(--muted); font-size: 0.92rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="kicker">個人用デスクトップ OAuth クライアント</p>
+    <h1>bingx-rclone</h1>
+    <nav>
+      <a href="index.html" aria-current="page">ホーム</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="terms.html">利用規約</a>
+      <a href="#en">English</a>
+    </nav>
+  </header>
+  <main>
+    <p>所有者本人の rclone から、所有者本人の Google ドライブへファイルを送るためだけのアプリです。</p>
+
+    <h2>このアプリについて</h2>
+    <p>bingx-rclone は、所有者本人のサーバーで動かしている暗号資産取引用ボットのログとコードを、自分の Google ドライブ内の <code>BingX_bot</code> フォルダへアップロードし、同期するためのアプリです。同期はサーバーからドライブへの一方向です。使うのは所有者本人の rclone だけで、ほかの利用者はいません。</p>
+
+    <h2>アクセスする範囲</h2>
+    <p>使用する Google API のスコープは、次の 1 つだけです。</p>
+    <p class="scope">https://www.googleapis.com/auth/drive.file</p>
+    <p><code>drive.file</code> で扱えるのは、このアプリ自身が作成したファイル、および利用者がこのアプリで開いたファイルに限られます。このアプリが実際に作成・更新するのは、所有者本人の <code>BingX_bot</code> フォルダに置くログとコードです。Google ドライブ全体の一覧、ほかのアプリが作ったファイル、Gmail、カレンダー、連絡先にはアクセスしません。</p>
+
+    <h2>利用者</h2>
+    <p>利用者は所有者本人だけです。個人利用であり、商用サービスではなく、第三者がログインするアプリでもありません。認可するのは所有者本人の Google アカウントだけです。</p>
+
+    <h2>データの扱い</h2>
+    <p>データを収集・販売・共有しません。アナリティクスも Cookie も使いません。ファイルの送り先は所有者本人の Google ドライブだけで、それ以外の場所へは送りません。開発者用の別サーバーが Google のデータを受け取ることはありません。</p>
+    <p>詳細は <a href="privacy.html">プライバシーポリシー</a> に、利用条件は <a href="terms.html">利用規約</a> に書いてあります。</p>
+
+    <section class="en" id="en" lang="en">
+      <p class="kicker">English</p>
+      <h2>What this app is</h2>
+      <p>bingx-rclone is a desktop OAuth client used only by the owner's own rclone instance. It uploads and syncs the owner's own crypto trading bot logs and code from the owner's own server into a <code>BingX_bot</code> folder in the owner's own Google Drive. The sync is one-way, from the server to Drive. There are no other users.</p>
+
+      <h2>What it accesses</h2>
+      <p>The app requests a single Google API scope:</p>
+      <p class="scope">https://www.googleapis.com/auth/drive.file</p>
+      <p><code>drive.file</code> covers only files created by the app itself, and files the user opens with the app. In this use, those files are the owner's logs and code written into the owner's <code>BingX_bot</code> folder. The app does not list the rest of Google Drive, and it does not access files created by other apps, Gmail, Calendar, or contacts.</p>
+
+      <h2>Who uses it</h2>
+      <p>The only user is the owner. This is personal use. It is not a commercial service, and no one else signs in. The only Google account that authorizes the app is the owner's.</p>
+
+      <h2>How data is handled</h2>
+      <p>The app does not collect, sell, or share data. It uses no analytics and no cookies. Files are sent only to the owner's own Google Drive and nowhere else. No separate developer server receives Google user data.</p>
+      <p>See the <a href="privacy.html">Privacy Policy</a> and the <a href="terms.html">Terms of Service</a>.</p>
+    </section>
+  </main>
+  <footer>
+    <p>このアプリは外部の利用者がいない個人用ツールです。アクセス権は <a href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</a> で取り消せます。</p>
+    <p lang="en">This is a personal tool with no external users. Access can be revoked at <a href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</a>.</p>
+  </footer>
+</body>
+</html>
